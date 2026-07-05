@@ -3,118 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hawaii Photo Movie｜往事余愁</title>
+  <title>HAWAII | City of Heaven</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: #0b0b0b;
-      color: #f5f0e8;
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Yu Mincho", serif;
+      background: #f7f3ec;
+      color: #17465b;
+      font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", serif;
       text-align: center;
     }
-    .page {
-      width: min(1100px, 94vw);
-      margin: 0 auto;
-      padding: 42px 0 60px;
+    header {
+      padding: 54px 20px 32px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7f3ec 100%);
     }
-    section {
-      margin: 0 auto 56px;
-      padding: 24px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 22px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-    }
-    .eyebrow {
-      color: #c8ad6a;
+    .small-title {
       letter-spacing: .18em;
-      font-size: .86rem;
-      margin-bottom: 8px;
+      color: #9f8b5d;
+      font-size: .9rem;
+      margin-bottom: 10px;
     }
     h1 {
-      margin: 0 0 8px;
-      font-weight: 400;
-      letter-spacing: .1em;
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      letter-spacing: .08em;
+      color: #0f4a60;
+    }
+    .subtitle {
+      margin-top: 14px;
+      color: #667;
+      font-size: 1.05rem;
+    }
+    main {
+      width: min(1100px, 94vw);
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+    section {
+      margin: 38px auto 58px;
+      padding: 26px;
+      background: #fffaf2;
+      border-radius: 22px;
+      box-shadow: 0 14px 42px rgba(0,0,0,.12);
     }
     h2 {
-      margin: 0 0 24px;
-      font-weight: 300;
-      color: #d8c38a;
-      font-size: clamp(1rem, 2vw, 1.3rem);
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: .08em;
+      color: #0f4a60;
     }
-    p {
-      color: #cfc8bb;
+    .section-note {
+      margin: 0 0 26px;
+      color: #5f6b70;
       line-height: 1.8;
     }
-    .photos {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 14px;
-      margin-top: 24px;
     }
-    .photos img {
+    .gallery img {
       width: 100%;
       aspect-ratio: 4 / 3;
       object-fit: cover;
       border-radius: 12px;
-      background: #222;
-      box-shadow: 0 8px 20px rgba(0,0,0,.35);
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      background: #ddd;
     }
-    video {
-      display: block;
+    .slideshow {
+      position: relative;
       width: 100%;
-      max-height: 78vh;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
       border-radius: 18px;
       background: #000;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      box-shadow: 0 10px 32px rgba(0,0,0,.25);
     }
-    .footer {
-      color: #999;
-      letter-spacing: .08em;
+    .slideshow img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+    .slideshow img.active {
+      opacity: 1;
+    }
+    video {
+      width: 100%;
+      max-height: 78vh;
+      display: block;
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 10px 32px rgba(0,0,0,.25);
+    }
+    .memory-section {
+      background: #111;
+      color: #f4f0e8;
+    }
+    .memory-section h2 {
+      color: #f4f0e8;
+    }
+    .memory-section .section-note {
+      color: #cfc8bb;
+    }
+    footer {
+      padding: 34px 20px 48px;
+      color: #6b6b6b;
       font-size: .9rem;
+      letter-spacing: .08em;
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section>
-      <div class="eyebrow">HAWAII MEMORY</div>
-      <h1>Hawaii Photo Movie</h1>
-      <h2>Photo Gallery</h2>
-      <p>ハワイの思い出を写真で表示します。</p>
+  <header>
+    <div class="small-title">TRAVEL MEMORY</div>
+    <h1>HAWAII | City of Heaven</h1>
+    <p class="subtitle">旅の風景、海、夕景、ゴルフ、そして記憶の余韻。</p>
+  </header>
 
-      <div class="photos">
-        <img src="photo01.jpg" alt="Hawaii photo 1">
-        <img src="photo02.jpg" alt="Hawaii photo 2">
-        <img src="photo03.jpg" alt="Hawaii photo 3">
-        <img src="photo04.jpg" alt="Hawaii photo 4">
-        <img src="photo05.jpg" alt="Hawaii photo 5">
-        <img src="photo06.jpg" alt="Hawaii photo 6">
-        <img src="photo07.jpg" alt="Hawaii photo 7">
-        <img src="photo08.jpg" alt="Hawaii photo 8">
-        <img src="photo09.jpg" alt="Hawaii photo 9">
-        <img src="photo10.jpg" alt="Hawaii photo 10">
-        <img src="photo11.jpg" alt="Hawaii photo 11">
-        <img src="photo12.jpg" alt="Hawaii photo 12">
-        <img src="photo13.jpg" alt="Hawaii photo 13">
-        <img src="photo14.jpg" alt="Hawaii photo 14">
-        <img src="photo15.jpg" alt="Hawaii photo 15">
+  <main>
+    <section>
+      <h2>GALLERY</h2>
+      <p class="section-note">サンセット、ビーチ、ゴルフ、グルメ。ハワイの記憶を写真で巡ります。</p>
+      <div class="gallery">
+        <img src="photo01.jpg" alt="">
+        <img src="photo02.jpg" alt="">
+        <img src="photo03.jpg" alt="">
+        <img src="photo04.jpg" alt="">
+        <img src="photo05.jpg" alt="">
+        <img src="photo06.jpg" alt="">
+        <img src="photo07.jpg" alt="">
+        <img src="photo08.jpg" alt="">
+        <img src="photo09.jpg" alt="">
+        <img src="photo10.jpg" alt="">
+        <img src="photo11.jpg" alt="">
+        <img src="photo12.jpg" alt="">
+        <img src="photo13.jpg" alt="">
+        <img src="photo14.jpg" alt="">
+        <img src="photo15.jpg" alt="">
       </div>
     </section>
 
     <section>
-      <div class="eyebrow">A CINEMATIC MEMORY</div>
-      <h1>往事余愁</h1>
-      <h2>附視頻寄語</h2>
-      <p>静かに残る記憶を、ひとつの映像作品として。</p>
+      <h2>HAWAII PHOTO MOVIE</h2>
+      <p class="section-note">写真から作る、静かなハワイのスライドショーです。</p>
+      <div class="slideshow" id="hawaiiSlideshow">
+        <img src="photo01.jpg" class="active" alt="">
+        <img src="photo02.jpg" alt="">
+        <img src="photo03.jpg" alt="">
+        <img src="photo04.jpg" alt="">
+        <img src="photo05.jpg" alt="">
+        <img src="photo06.jpg" alt="">
+        <img src="photo07.jpg" alt="">
+        <img src="photo08.jpg" alt="">
+        <img src="photo09.jpg" alt="">
+        <img src="photo10.jpg" alt="">
+        <img src="photo11.jpg" alt="">
+        <img src="photo12.jpg" alt="">
+        <img src="photo13.jpg" alt="">
+        <img src="photo14.jpg" alt="">
+        <img src="photo15.jpg" alt="">
+      </div>
+    </section>
 
+    <section class="memory-section">
+      <div class="small-title">A CINEMATIC MEMORY</div>
+      <h2>往事余愁</h2>
+      <p class="section-note">附視頻寄語 — 静かに残る記憶を、ひとつの映像作品として。</p>
       <video controls playsinline preload="metadata">
         <source src="wakarenoyokan_full.mp4" type="video/mp4">
         お使いのブラウザでは動画を再生できません。
       </video>
     </section>
-
-    <div class="footer">A quiet tribute to unforgettable memories.</div>
   </main>
+
+  <footer>
+    HAWAII | City of Heaven　—　A quiet tribute to unforgettable memories.
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('#hawaiiSlideshow img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
 </body>
 </html>
