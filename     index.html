@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawaii Photo Movie｜往事余愁</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #f5f0e8;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Yu Mincho", serif;
+      text-align: center;
+    }
+    .page {
+      width: min(1100px, 94vw);
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
+    section {
+      margin: 0 auto 56px;
+      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+    .eyebrow {
+      color: #c8ad6a;
+      letter-spacing: .18em;
+      font-size: .86rem;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-weight: 400;
+      letter-spacing: .1em;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+    h2 {
+      margin: 0 0 24px;
+      font-weight: 300;
+      color: #d8c38a;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+    }
+    p {
+      color: #cfc8bb;
+      line-height: 1.8;
+    }
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .photos img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #222;
+      box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    }
+    video {
+      display: block;
+      width: 100%;
+      max-height: 78vh;
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+    .footer {
+      color: #999;
+      letter-spacing: .08em;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section>
+      <div class="eyebrow">HAWAII MEMORY</div>
+      <h1>Hawaii Photo Movie</h1>
+      <h2>Photo Gallery</h2>
+      <p>ハワイの思い出を写真で表示します。</p>
+
+      <div class="photos">
+        <img src="photo01.jpg" alt="Hawaii photo 1">
+        <img src="photo02.jpg" alt="Hawaii photo 2">
+        <img src="photo03.jpg" alt="Hawaii photo 3">
+        <img src="photo04.jpg" alt="Hawaii photo 4">
+        <img src="photo05.jpg" alt="Hawaii photo 5">
+        <img src="photo06.jpg" alt="Hawaii photo 6">
+        <img src="photo07.jpg" alt="Hawaii photo 7">
+        <img src="photo08.jpg" alt="Hawaii photo 8">
+        <img src="photo09.jpg" alt="Hawaii photo 9">
+        <img src="photo10.jpg" alt="Hawaii photo 10">
+        <img src="photo11.jpg" alt="Hawaii photo 11">
+        <img src="photo12.jpg" alt="Hawaii photo 12">
+        <img src="photo13.jpg" alt="Hawaii photo 13">
+        <img src="photo14.jpg" alt="Hawaii photo 14">
+        <img src="photo15.jpg" alt="Hawaii photo 15">
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">A CINEMATIC MEMORY</div>
+      <h1>往事余愁</h1>
+      <h2>附視頻寄語</h2>
+      <p>静かに残る記憶を、ひとつの映像作品として。</p>
+
+      <video controls playsinline preload="metadata">
+        <source src="wakarenoyokan_full.mp4" type="video/mp4">
+        お使いのブラウザでは動画を再生できません。
+      </video>
+    </section>
+
+    <div class="footer">A quiet tribute to unforgettable memories.</div>
+  </main>
+</body>
+</html>
