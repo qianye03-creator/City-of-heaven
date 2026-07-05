@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hawaii Photo Movie｜往事余愁</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(200,170,100,.16), transparent 38%),
+        linear-gradient(180deg, #101010 0%, #050505 100%);
+      color: #f4f0e8;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Yu Mincho", serif;
+      text-align: center;
+    }
+    .page {
+      width: min(1100px, 94vw);
+      margin: 0 auto;
+      padding: 46px 0 60px;
+    }
+    .eyebrow {
+      color: #c8ad6a;
+      letter-spacing: .22em;
+      font-size: .85rem;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: .14em;
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-shadow: 0 8px 28px rgba(0,0,0,.7);
+    }
+    h2 {
+      margin: 10px 0 24px;
+      font-weight: 300;
+      letter-spacing: .12em;
+      color: #d8c38a;
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+    }
+    .lead {
+      margin: 0 auto 28px;
+      max-width: 760px;
+      line-height: 1.9;
+      color: #cfc8bb;
+      font-size: 1rem;
+    }
+    .card {
+      margin: 34px auto 54px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.035);
+      box-shadow: 0 24px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(220,190,120,.18);
+    }
+    .slideshow {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #000;
+    }
+    .slideshow img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 75s infinite;
+    }
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 5s; }
+    .slideshow img:nth-child(3) { animation-delay: 10s; }
+    .slideshow img:nth-child(4) { animation-delay: 15s; }
+    .slideshow img:nth-child(5) { animation-delay: 20s; }
+    .slideshow img:nth-child(6) { animation-delay: 25s; }
+    .slideshow img:nth-child(7) { animation-delay: 30s; }
+    .slideshow img:nth-child(8) { animation-delay: 35s; }
+    .slideshow img:nth-child(9) { animation-delay: 40s; }
+    .slideshow img:nth-child(10) { animation-delay: 45s; }
+    .slideshow img:nth-child(11) { animation-delay: 50s; }
+    .slideshow img:nth-child(12) { animation-delay: 55s; }
+    .slideshow img:nth-child(13) { animation-delay: 60s; }
+    .slideshow img:nth-child(14) { animation-delay: 65s; }
+    .slideshow img:nth-child(15) { animation-delay: 70s; }
+    @keyframes fade {
+      0% { opacity: 0; transform: scale(1.02); }
+      3% { opacity: 1; }
+      6.3% { opacity: 1; transform: scale(1.08); }
+      9.5% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    video {
+      display: block;
+      width: 100%;
+      max-height: 78vh;
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 24px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(220,190,120,.18);
+    }
+    .footer {
+      margin-top: 24px;
+      color: #9f9687;
+      font-size: .9rem;
+      letter-spacing: .08em;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <section class="card">
+      <div class="eyebrow">HAWAII MEMORY</div>
+      <h1>Hawaii Photo Movie</h1>
+      <h2>Photo Slideshow</h2>
+      <p class="lead">大切なハワイの思い出を、写真のスライドショーとして。</p>
+      <div class="slideshow">
+        <img src="photo01.jpg" alt="">
+        <img src="photo02.jpg" alt="">
+        <img src="photo03.jpg" alt="">
+        <img src="photo04.jpg" alt="">
+        <img src="photo05.jpg" alt="">
+        <img src="photo06.jpg" alt="">
+        <img src="photo07.jpg" alt="">
+        <img src="photo08.jpg" alt="">
+        <img src="photo09.jpg" alt="">
+        <img src="photo10.jpg" alt="">
+        <img src="photo11.jpg" alt="">
+        <img src="photo12.jpg" alt="">
+        <img src="photo13.jpg" alt="">
+        <img src="photo14.jpg" alt="">
+        <img src="photo15.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">A CINEMATIC MEMORY</div>
+      <h1>往事余愁</h1>
+      <h2>附視頻寄語</h2>
+      <p class="lead">静かに残る記憶を、ひとつの映像作品として。</p>
+      <video controls playsinline preload="metadata">
+        <source src="wakarenoyokan_full.mp4" type="video/mp4" />
+        お使いのブラウザでは動画を再生できません。
+      </video>
+    </section>
+
+    <div class="footer">A quiet tribute to unforgettable memories.</div>
+  </main>
+</body>
+</html>
